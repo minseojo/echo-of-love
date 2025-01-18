@@ -10,7 +10,7 @@ public class MemberController {
 
     @GetMapping("/sign-up")
     public String signUpForm() {
-        return "sign-up"; // sign-up.html 반환
+        return "members/sign-up"; // sign-up.html 반환
     }
 
     @PostMapping("/sign-up")
@@ -21,7 +21,7 @@ public class MemberController {
 
     @GetMapping("/sign-in")
     public String signInForm() {
-        return "sign-in"; // sign-in.html 반환
+        return "members/sign-in"; // sign-in.html 반환
     }
 
     @PostMapping("/sign-in")
@@ -35,17 +35,22 @@ public class MemberController {
         // 예시 데이터
         model.addAttribute("email", "user@example.com");
         model.addAttribute("phone", "010-1234-5678");
-        return "profile"; // profile.html 반환
+        return "members/profile"; // profile.html 반환
+    }
+
+    @GetMapping("/sign-out")
+    public String signOut() {
+        return "redirect:/"; // 로그아웃 후 메인 페이지로 리디렉션
     }
 
     @PostMapping("/leave")
     public String leave() {
         // 탈퇴 처리 로직
-        return "redirect:/goodbye"; // 탈퇴 후 페이지 이동
+        return "redirect:/"; // 탈퇴 후 페이지 이동
     }
 
     @GetMapping("/faqs")
     public String faqs() {
-        return "faqs"; // faqs.html 반환
+        return "members/faqs"; // faqs.html 반환
     }
 }
