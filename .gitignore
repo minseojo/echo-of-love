@@ -19,3 +19,27 @@ gradle-app.setting
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+
+# Spring Boot-specific files
+**/application-*.yml
+**/application-*.properties
+
+# Thymeleaf cache (if any)
+*.thtml.cache
+
+
+# IntelliJ IDEA-specific files
+.idea/
+*.iml
+*.iws
+
+# MacOS-specific files
+.DS_Store
+
+# Windows-specific files
+Thumbs.db
+ehthumbs.db
+
+# Compiled Java class files
+*.class
